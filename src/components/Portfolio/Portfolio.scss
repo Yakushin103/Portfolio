@@ -1,0 +1,52 @@
+@mixin desktop {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+.portfolio {
+    width: 100%;
+    margin-bottom: 2rem;
+    background: #F6F6F6;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.portfolio .row {
+    justify-content: center;
+}
+
+.portfolio span {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #070707;
+
+    @include tablets {
+        font-size: 1rem;
+    }
+
+    @include phones {
+        font-size: .8rem;
+    }
+}

@@ -1,0 +1,63 @@
+@mixin desktop {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+.App {
+  background-color: #fff;
+  width: 100%;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+  color: #070707;
+
+  @include tablets {
+	font-size: 1.2rem;
+}
+
+	@include phones {
+		font-size: 1rem;
+}
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 47.3392px;
+  line-height: 59px;
+  color: #070707;
+
+  @include tablets {
+	font-size: 1.5rem;
+}
+
+	@include phones {
+		font-size: 1rem;
+}
+}
+
+

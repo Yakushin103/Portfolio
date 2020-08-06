@@ -1,0 +1,75 @@
+@mixin desktop {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+.skills {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.skills-items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skills-text span {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #070707;
+
+    @include tablets {
+        font-size: 1rem;
+    }
+
+    @include phones {
+        font-size: .8rem;
+    }
+}
+
+.skills-item {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-stars img {
+    margin: 3px;
+
+    @include tablets {
+        margin: 2px;
+    }
+
+    @include phones {
+        margin: 1px;
+    }
+}

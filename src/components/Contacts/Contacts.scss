@@ -1,0 +1,71 @@
+@mixin desktop {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+.contacts {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: #ffffff;
+}
+
+.contacts .row {
+    justify-content: center;
+}
+
+.contacts-social a {
+    margin: 1rem;
+}
+
+.contacts span {
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #070707;
+
+    @include tablets {
+        font-size: 1rem;
+    }
+
+    @include phones {
+        font-size: .8rem;
+    }
+}
+
+.contacts-text span {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #828282;
+
+    @include tablets {
+        font-size: .8rem;
+    }
+
+    @include phones {
+        font-size: .6rem;
+    }
+}

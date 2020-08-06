@@ -1,0 +1,106 @@
+@mixin desktop {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+.header {
+    margin-bottom: 2rem;
+    height: 100vh;
+
+    @include tablets {
+        height: auto;
+    }
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-nav button {
+    background: #fff;
+    border: 0;
+    font-size: 18px;
+    line-height: 22px;
+    color: #828282;
+    font-weight: bold;
+
+    @include tablets {
+        font-size: 1rem;
+    }
+}
+
+.header-content {
+    margin-top: 2rem;
+}
+
+.header-content-items {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-content-items span {
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+
+    @include tablets {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    @include phones {
+        font-size: .8rem;
+    }
+}
+
+.header-content img {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.header-content .vertical-button {
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+}
+
+.header-content .vertical-button button {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    text-align: center;
+    background: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    color: #828282;
+    border: 0;
+    border-radius: 0;
+}
+
+.header-content .vertical-button button.choosed {
+    font-weight: bold;
+    color: #070707;
+}
