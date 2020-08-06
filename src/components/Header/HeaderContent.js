@@ -38,7 +38,7 @@ const HeaderContent = ({ lang, setLang }) => {
 
                 </Col>
             </Row>
-            <Row>
+            <Row className='header-content-img'>
                 <img src={ImgContent}></img>
             </Row>
         </div>

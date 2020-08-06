@@ -77,9 +77,23 @@
     }
 }
 
-.header-content img {
+.header-content-img {
+    display: flex;
+    justify-content: center;
+}
+
+.header-content-img img {
     margin-top: 2rem;
     width: 100%;
+    @include tablets {
+        height: auto;
+        width: 80%;
+    }
+
+    @include phones {
+        height: 150px;
+        width: 80%;
+    }
 }
 
 .header-content .vertical-button {
